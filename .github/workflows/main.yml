@@ -4,7 +4,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  secure-rdp:
+  secure-  se
+      Start-Process msiexec.exe -ArgumentList "/i `"$installerPath`" /quiet /norestart" -Wait
+    Remove-Item -Path $installerPath -Force
+
     runs-on: windows-latest
     timeout-minutes: 3600
 
