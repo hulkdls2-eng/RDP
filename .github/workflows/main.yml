@@ -41,13 +41,14 @@ jobs:
 
       - name: Maintain Connection
         run: |
+          $pass = $env:RDP_PASSWORD
           Write-Host "`n=== RDP ACCESS ==="
           Write-Host "Address: $env:TAILSCALE_IP"
           Write-Host "Username: RDP"
-          Write-Host "Password: User: RDP | Password: $env:RDP_PASSWORD"
+          Write-Host "Password: User: RDP | Password: $pass"
           Write-Host "==================`n"
           while ($true) {
-              Write-Host "[$(Get-Date)] RDP Active - Use Ctrl+C to terminate"
+              Write-Host "[$(Get-Date)] RDP Active - Use Ctrl+C in workflow to terminate"
               Start-Sleep -Seconds 300
           }
 
